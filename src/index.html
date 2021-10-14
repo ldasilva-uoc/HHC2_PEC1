@@ -8,44 +8,47 @@
     <title>UOC Boilerplate</title>
   </head>
   <body>
-    <header>
-      <nav>
-        <ul>
-          <li>
-            <a href="#portada">Sobre mi</a>
+    <header id="header" class="header">
+      <nav class="nav">
+        <ul class="nav__list">
+          <li class="cover header__nav__list-item header__nav__list-item--selected">
+            <a href="#cover">Portada</a>
           </li>
 
-          <li>
+          <li class="about header__nav__list-item">
             <a href="#about">Sobre mi</a>
           </li>
 
-          <li>
-            <a href="#study">Pérfil académico</a>
+          <li class="study header__nav__list-item">
+            <a href="#study">Estudios</a>
+          </li class="header__nav__item">
+
+          <li class="work header__nav__list-item">
+            <a href="#work">Trabajos</a>
           </li>
 
-          <li>
-            <a href="#work">Experiencia laboral</a>
-          </li>
-
-          <li>
+          <li class="ability header__nav__list-item">
             <a href="#ability">Aptitudes</a>
           </li>
 
         </ul>
+
       </nav>
 
     </header>
 
-    <main>
-      <section id="main">
-          <img src="/src/assets/images/Logo.png"/>
-          <div>
-            <span>scroll</span>
+    <main id="main" class="main">
+      <section id="cover" class="section_cover">
+        <div class="cover__container">
+          <img class="cover__logo" src="/src/assets/images/Logo.png"/>
+          <div class="cover__guide">
+            <span class="cover_guide_label">scroll</span>
             <i class="fas fa-angle-double-down"></i>
           </div>
+        </div>
       </section>
 
-      <section id="about">
+      <section id="about" class="section_about">
         <div>
           <div>
             <p>Hola, mi nombre es<span> Luiza</span></p>
@@ -61,7 +64,7 @@
 
       </section>
 
-      <section id="study">
+      <section id="study" class="section_study">
         <div>
           <h2>Perfil académico</h2>
         
@@ -159,7 +162,7 @@
 
       </section>
 
-      <section id="ability">
+      <section id="ability" class="section_ability">
         <div>
 
           <div>

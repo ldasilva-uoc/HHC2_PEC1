@@ -1,50 +1,117 @@
 * {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
-  display: flex;
-  height: 100vh;
-  margin: 0;
-  padding: 2rem;
-  font-family: $font-family-sans-serif;
+  font-family: $font-family-primary;
   font-size: 16px;
-  line-height: 24px;
-  background-color: $uoc-bg;
-  color: $uoc-corporate;
+  margin: 0;
 }
 
-.uoc-container {
-  max-width: 800px;
-  margin: auto;
-  padding: 2rem;
-  border-radius: 2rem;
-  text-align: center;
-  background-color: #fff;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
-    0 2px 4px -1px rgba(0, 0, 0, 0.06);
-}
+/*------------------------------------*\
+  #HEADER
+\*------------------------------------*/
 
-.uoc-logo {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 1.5rem;
-  max-width: 200px;
-  height: auto;
+.header {
+  background-color: $color-primary;
+  font-size: 0.8rem;
+  position: fixed;
+  width: 100vw;
 
-  @media (min-width: $mqMinWidth) {
-    max-width: 350px;
+  .nav {
+    width: 90vw;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+    margin: 0 auto;
+
+    .nav__list {
+      width: 100vw;
+      padding: 0;
+      display: flex;
+    }
+
+    .header__nav__list-item {
+      display: inline-block;
+      text-align: center;
+      flex: 1;
+    }
+
+    a {
+      text-decoration: none;
+      color: $color-secondary;
+    }
+
+    .header__nav__list-item--selected {
+      a {
+        text-decoration: underline;
+      }
+    }
   }
 }
 
-.uoc-title {
-  font-family: $font-family-serif;
-  font-size: 24px;
-  font-weight: 700;
-  color: $uoc-corporate;
+/*------------------------------------*\
+  #MAIN
+\*------------------------------------*/
 
-  @media (min-width: $mqMinWidth) {
-    font-size: 36px;
+.main {
+  background-color: $color-primary;
+}
+
+.section_cover {
+  height: 100vh;
+  border: 3px solid red;
+  margin: 0 auto;
+
+  .cover__container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .cover__logo {
+      width: 50%;
+      justify-self: end;
+    }
+    .cover__guide {
+      position: absolute;
+      bottom: 1rem;
+
+      justify-self: end;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .cover_guide_label {
+      }
+    }
+  }
+}
+
+/*------------------------------------*\
+  #ABOUT
+\*------------------------------------*/
+
+.section_about {
+  height: 100vh;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  margin: 0 auto;
+  border: 3px solid red;
+  margin-top: 6rem;
+
+  background-color: $color-secondary;
+}
+
+@media screen and (min-width: $mqMinWidth) {
+  body {
+  }
+}
+
+@media screen and (min-width: $lqMinWidth) {
+  body {
   }
 }
