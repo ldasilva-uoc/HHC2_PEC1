@@ -31,7 +31,7 @@ body {
       display: flex;
     }
 
-    .header__nav__list-item {
+    .nav__list-item {
       display: inline-block;
       text-align: center;
       flex: 1;
@@ -42,7 +42,7 @@ body {
       color: $color-secondary;
     }
 
-    .header__nav__list-item--selected {
+    .nav__list-item--selected {
       a {
         text-decoration: underline;
       }
@@ -58,7 +58,7 @@ body {
   background-color: $color-primary;
 }
 
-.section_cover {
+.section__cover {
   height: 100vh;
   border: 3px solid red;
   margin: 0 auto;
@@ -84,9 +84,6 @@ body {
       flex-direction: column;
       justify-content: center;
       align-items: center;
-
-      .cover_guide_label {
-      }
     }
   }
 }
@@ -95,7 +92,7 @@ body {
   #ABOUT
 \*------------------------------------*/
 
-.section_about {
+.section__about {
   height: 100vh;
   padding-left: 2rem;
   padding-right: 2rem;
@@ -106,12 +103,9 @@ body {
   background-color: $color-secondary;
 }
 
+/*
 @media screen and (min-width: $mqMinWidth) {
-  body {
-  }
 }
 
 @media screen and (min-width: $lqMinWidth) {
-  body {
-  }
-}
+}*/

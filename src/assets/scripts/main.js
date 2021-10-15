@@ -32,9 +32,9 @@ window.addEventListener('scroll', ()=> {
   })
 
   navLi.forEach( li => {
-    li.classList.remove('header__nav__list-item--selected');
+    li.classList.remove('nav__list-item--selected');
     if(li.classList.contains(current)){
-      li.classList.add('header__nav__list-item--selected');
+      li.classList.add('nav__list-item--selected');
     }
   })
 } )
