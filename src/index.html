@@ -8,6 +8,7 @@
     <title>UOC Boilerplate</title>
   </head>
   <body>
+
     <header id="header" class="header">
       <nav class="nav">
         <ul class="nav__list">
@@ -38,8 +39,9 @@
     </header>
 
     <main id="main" class="main">
-      <section id="cover" class="section__cover">
-        <div class="cover__container">
+
+      <section id="cover" class="section section__cover">
+        <div class="section__container cover__container">
           <img class="cover__logo" src="./assets/images/logo.png"/>
           <div class="cover__guide">
             <span class="cover__label">scroll</span>
@@ -48,65 +50,53 @@
         </div>
       </section>
 
-      <section id="about" class="section__about">
-        <div>
-          <div>
-            <p>Hola, mi nombre es<span> Luiza</span></p>
-            <p>Soy una desarrolladora web con un perfil junior que buscar el aprendizaje, el crecimiento y establecer una carrera profesional en el sector del diseño y desarrollo de aplicaciones web. 
+      <section id="about" class="section section__about">
+        <div class="section__container about__container">
+            <p class="about_introduction">Hola, mi nombre es<span> Luiza</span></p>
+            <p class="about__description">Soy una desarrolladora web con un perfil junior que buscar el aprendizaje, el crecimiento y establecer una carrera profesional en el sector del diseño y desarrollo de aplicaciones web. 
             Soy de Barsil pero vivo en Valencia desde hace 18 años, por lo que soy más española qeu brasileña.
             Me encanta aprender cosas nuevas y diferentes, siempre estoy haciendo algún curso de algo.</p>
-          </div>
-          <div>
-            <i class="fas fa-angle-up"></i>
-          </div>
-      
         </div>
 
       </section>
 
-      <section id="study" class="section__study">
-        <div>
-          <h2>Perfil académico</h2>
+      <section id="study" class="section section__study">
+        <div class="section__container study_container">
+          <h2 class="section__title">Perfil académico</h2>
         
-          <div>
-            <div></div>
-            
-            <div>
-              <p>Titulo de Master</p>
+          <div class="list__inner">
+            <div class="list__partlist list__partlist--right">
 
-              <p>Universidad</p>
-
-              <p>Año</p>
-
-            </div>
-
-          </div>
-
-          <div></div>
-
-          <div>
-
-            <div>
-              <p>Titulo de Grado</p>
-
-              <p>Universidad</p>
-
-              <p>Año</p>
+              <div class="partlist__dot partlist__dot--current"></div>
+              <div  class="partlist__container partlist__container--right">
+                <p class="partlist__title">Titulo de Master</p>
+                <p class="partlist__addres">Universidad</p>
+                <p class="partlist__year">Año</p>
+              </div>
 
             </div>
 
-            <div></div>
+            <div class="list__conexion"></div>
 
+            <div class="list__partlist list__partlist--left">
+
+              <div  class="partlist__container partlist__container--left">
+                <p class="partlist__title">Titulo de Master</p>
+                <p class="partlist__addres">Universidad</p>
+                <p class="partlist__year">Año</p>
+              </div>
+              <div class="partlist__dot partlist__dot--current"></div>
+            </div>
           </div>
+
+         
          
         </div>
 
       </section>
 
-      <section id="work">
-
-
-        <div>
+      <section id="work" class="section section__work">
+        <div class="section__container">
           <h2>Experiencia Laboral</h2>
         
           <div>
@@ -162,8 +152,8 @@
 
       </section>
 
-      <section id="ability" class="section_ability">
-        <div>
+      <section id="ability" class="section section_ability">
+        <div class="section__container">
 
           <div>
             <p>Lenguajes</p>

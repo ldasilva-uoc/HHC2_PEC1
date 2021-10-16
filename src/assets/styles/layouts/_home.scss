@@ -9,6 +9,25 @@ body {
   margin: 0;
 }
 
+.section {
+  height: 100vh;
+  padding-left: 2rem;
+  padding-right: 2rem;
+
+  margin: 0 auto;
+}
+
+.section__container {
+  width: 100%;
+  height: 100%;
+}
+
+.section__title {
+  font-weight: bold;
+  margin-bottom: 10%;
+  font-size: 1.5rem;
+}
+
 /*------------------------------------*\
   #HEADER
 \*------------------------------------*/
@@ -21,7 +40,7 @@ body {
 
   .nav {
     width: 90vw;
-    padding-top: 2rem;
+    padding-top: 1rem;
     padding-bottom: 1rem;
     margin: 0 auto;
 
@@ -41,10 +60,16 @@ body {
       text-decoration: none;
       color: $color-secondary;
     }
+    a:hover {
+      font-weight: bolder;
+    }
 
     .nav__list-item--selected {
       a {
         text-decoration: underline;
+      }
+      a:hover {
+        font-weight: normal;
       }
     }
   }
@@ -55,17 +80,13 @@ body {
 \*------------------------------------*/
 
 .main {
-  background-color: $color-primary;
+  background-color: $color-secondary;
 }
 
 .section__cover {
-  height: 100vh;
-  border: 3px solid red;
-  margin: 0 auto;
+  background-color: $color-primary;
 
   .cover__container {
-    width: 100%;
-    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -78,12 +99,24 @@ body {
     .cover__guide {
       position: absolute;
       bottom: 1rem;
-
-      justify-self: end;
       display: flex;
       flex-direction: column;
-      justify-content: center;
       align-items: center;
+      color: $color-detail-primary;
+      font-size: 0.7rem;
+      animation-name: upDown;
+      animation-duration: 1s;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+    }
+
+    @keyframes upDown {
+      from {
+        bottom: 6px;
+      }
+      to {
+        bottom: 9px;
+      }
     }
   }
 }
@@ -93,14 +126,84 @@ body {
 \*------------------------------------*/
 
 .section__about {
-  height: 100vh;
-  padding-left: 2rem;
-  padding-right: 2rem;
-  margin: 0 auto;
-  border: 3px solid red;
-  margin-top: 6rem;
+  margin-top: 10rem;
+  padding-top: 1rem;
+}
 
-  background-color: $color-secondary;
+.about__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+
+  .about_introduction {
+    font-size: 1.5rem;
+  }
+}
+
+/*------------------------------------*\
+  #STUDY
+\*------------------------------------*/
+
+.section__study {
+  margin-top: 10rem;
+  display: flex;
+  flex-direction: column;
+  padding-top: 7rem;
+}
+.list__inner {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.8rem;
+}
+
+.list__conexion {
+  border: 1px solid red;
+  height: 5rem;
+  width: 1px;
+  align-self: center;
+}
+.list__partlist {
+  display: flex;
+  align-items: center;
+
+  width: 50%;
+  column-gap: 10px;
+}
+
+.list__partlist--right {
+  align-self: flex-end;
+  border: 1px solid red;
+}
+
+.list__partlist--left {
+  align-self: flex-start;
+  justify-content: right;
+}
+
+.partlist__container {
+  display: flex;
+  flex-direction: column;
+
+  .partlist__title {
+    margin: 0;
+  }
+  .partlist__addres {
+    margin: 0;
+  }
+  .partlist__year {
+    margin: 0;
+  }
+}
+
+.partlist__container--left {
+  align-items: flex-end;
+}
+
+.partlist__dot {
+  width: 20px;
+  height: 20px;
+  border: 1px solid red;
 }
 
 /*

@@ -16,7 +16,7 @@
 } )();
 
 const sections = document.querySelectorAll('section');
-const navLi = document.querySelectorAll('.header__nav__list-item')
+const navLi = document.querySelectorAll('.nav__list-item');
 
 window.addEventListener('scroll', ()=> {
   let current = '';
@@ -24,12 +24,15 @@ window.addEventListener('scroll', ()=> {
   sections.forEach( section  => {
     const sectionTop = section.offsetTop;
     const sectionHeight = section.clientHeight;
-
     if(pageYOffset >= sectionTop)
     {
-      current = section.getAttribute('id')
+      current = section.getAttribute('id');
     }
+
+
   })
+
+
 
   navLi.forEach( li => {
     li.classList.remove('nav__list-item--selected');
