@@ -10,11 +10,14 @@
  * Write any other JavaScript below
  */
 
-+( function() {
-  const university = "UOC";
-  console.log(`Hello, ${university}!`);
-} )();
 
+
+ AOS.init({
+  offset: 20,
+  delay: 100,
+  duration: 1000,
+  easing: 'ease'});
+  
 const sections = document.querySelectorAll('section');
 const navLi = document.querySelectorAll('.nav__list-item');
 

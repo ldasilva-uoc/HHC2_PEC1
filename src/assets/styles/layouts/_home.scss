@@ -7,13 +7,12 @@ body {
   font-family: $font-family-primary;
   font-size: 16px;
   margin: 0;
+  background-color: $color-secondary;
 }
 
 .section {
   height: 100vh;
-  padding-left: 2rem;
-  padding-right: 2rem;
-
+  width: 90%;
   margin: 0 auto;
 }
 
@@ -36,24 +35,27 @@ body {
   background-color: $color-primary;
   font-size: 0.8rem;
   position: fixed;
-  width: 100vw;
+  width: 100%;
+  z-index: 1;
 
   .nav {
-    width: 90vw;
-    padding-top: 1rem;
+    width: 100%;
+    padding-top: 2rem;
     padding-bottom: 1rem;
-    margin: 0 auto;
+    display: flex;
+    justify-content: center;
 
     .nav__list {
-      width: 100vw;
+      width: 90%;
       padding: 0;
       display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
     }
 
     .nav__list-item {
       display: inline-block;
       text-align: center;
-      flex: 1;
     }
 
     a {
@@ -79,12 +81,9 @@ body {
   #MAIN
 \*------------------------------------*/
 
-.main {
-  background-color: $color-secondary;
-}
-
 .section__cover {
   background-color: $color-primary;
+  width: 100% !important;
 
   .cover__container {
     display: flex;
@@ -145,32 +144,33 @@ body {
 /*------------------------------------*\
   #STUDY #WORK
 \*------------------------------------*/
+
 .list__inner {
   font-size: 0.8rem;
-  height: 80%;
+  height: 30rem;
   display: grid;
   grid-template-columns: 42% 11% 42%;
   grid-template-rows: 30% 40% 30%;
   column-gap: 2%;
 }
 
-.partlist__container {
+.list__container {
   display: flex;
   flex-direction: column;
 }
 
-.partlist__container--left {
+.list__container--left {
   align-items: flex-end;
 }
 
-.partlist__dot {
+.list__dot {
   width: 20px;
   height: 20px;
   border: 3px solid $color-primary;
   border-radius: 50%;
 }
 
-.partlist__dot--current {
+.list__dot--current {
   background-color: $color-detail-primary;
 }
 
@@ -181,18 +181,18 @@ body {
   width: 1px;
 }
 
-.partlist__item {
+.list__item {
   margin: 0;
 }
 
-.partlist__dotitem1 {
+.list__dotitem1 {
   grid-column: 2;
   grid-row: 1;
   justify-self: center;
   align-self: center;
 }
 
-.partlist__container2 {
+.list__container2 {
   grid-column: 3;
   grid-row: 1;
   align-self: center;
@@ -205,13 +205,13 @@ body {
   align-self: center;
 }
 
-.partlist__container4 {
+.list__container4 {
   grid-column: 1;
   grid-row: 3;
   align-self: center;
 }
 
-.partlist__dotitem5 {
+.list__dotitem5 {
   grid-column: 2;
   grid-row: 3;
   justify-self: center;
@@ -230,7 +230,6 @@ body {
 
 .study__title {
   font-size: 0.9rem;
-  font-weight: bold;
 }
 
 .study__year {
@@ -248,7 +247,7 @@ body {
 }
 
 .work__title {
-  font-weight: bold;
+  font-size: 0.9rem;
 }
 
 .work__business {
@@ -256,9 +255,211 @@ body {
   color: $color-detail-secondary;
 }
 
-/*
-@media screen and (min-width: $mqMinWidth) {
+/*------------------------------------*\
+  #ABILITY
+\*------------------------------------*/
+
+.section__ability {
+  margin-top: 10rem;
+  padding-top: 6rem;
+  height: 100vh;
 }
 
-@media screen and (min-width: $lqMinWidth) {
-}*/
+.ability__inner {
+  display: flex;
+  flex-direction: column;
+}
+
+.ability__container {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.8rem;
+  color: $color-primary;
+}
+
+.ability__item {
+  background-color: $color-detail-primary;
+  margin-bottom: 2rem;
+  padding: 3%;
+  padding-left: 2rem;
+  border-radius: 2rem;
+  border: none;
+  box-shadow: 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.2);
+
+  p {
+    font-weight: bold;
+    font-size: 0.9rem;
+  }
+}
+
+/*------------------------------------*\
+  #FOOTER
+\*------------------------------------*/
+
+.footer {
+  height: 50%;
+  margin-top: 10rem;
+  padding-top: 6rem;
+  border-radius: 2rem 2rem 0 0;
+  background-color: $color-detail-primary;
+}
+
+.footer__content {
+  width: 90%;
+  height: 100%;
+  margin: 0 auto;
+
+  .footer__logo {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    margin: 0 auto;
+  }
+}
+
+.footer__rrss {
+  padding: 0;
+  padding-bottom: 30%;
+  margin-top: 10%;
+  margin-bottom: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+
+  li {
+    width: 10%;
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (min-width: $mqMinWidth) {
+  .section {
+    width: 70%;
+  }
+
+  /*------------------------------------*\
+  #HEADER
+  \*------------------------------------*/
+  .nav {
+    .nav__list {
+      width: 80% !important;
+    }
+  }
+
+  /*------------------------------------*\
+  #MAIN
+  \*------------------------------------*/
+
+  .section__cover {
+    .cover__logo {
+      width: 20% !important;
+    }
+  }
+
+  /*------------------------------------*\
+  #STUDY #WORK
+  \*------------------------------------*/
+  .list__inner {
+    font-size: 1rem;
+    height: 40rem !important;
+  }
+  /*------------------------------------*\
+  #STUDY
+  \*------------------------------------*/
+
+  .section__study {
+    padding-top: 9rem;
+  }
+
+  /*------------------------------------*\
+  #WORK
+  \*------------------------------------*/
+
+  .section__work {
+    padding-top: 9rem;
+  }
+
+  /*------------------------------------*\
+  #ABILITY
+  \*------------------------------------*/
+
+  .section__ability {
+    padding-top: 9rem;
+  }
+
+  /*------------------------------------*\
+  #FOOTER
+  \*------------------------------------*/
+
+  .footer {
+    border-radius: 2rem 2rem 0 0;
+    background-color: $color-detail-primary;
+  }
+
+  .footer__content {
+    width: 50%;
+  }
+}
+
+@media only screen and (min-width: $lqMinWidth) {
+  .section {
+    width: 50%;
+  }
+
+  /*------------------------------------*\
+  #HEADER
+  \*------------------------------------*/
+  .nav {
+    justify-content: end !important;
+
+    .nav__list {
+      width: 40% !important;
+    }
+  }
+
+  /*------------------------------------*\
+  #MAIN
+  \*------------------------------------*/
+
+  .section__cover {
+    .cover__logo {
+      width: 10% !important;
+    }
+  }
+
+  /*------------------------------------*\
+  #STUDY #WORK
+  \*------------------------------------*/
+
+  .list__inner {
+    font-size: 1rem;
+    height: 25rem !important;
+  }
+
+  .ability__inner {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .ability__item {
+    width: 45%;
+  }
+
+  /*------------------------------------*\
+  #FOOTER
+  \*------------------------------------*/
+
+  .footer {
+    border-radius: 2rem 2rem 0 0;
+    background-color: $color-detail-primary;
+  }
+
+  .footer__content {
+    width: 30%;
+  }
+}
