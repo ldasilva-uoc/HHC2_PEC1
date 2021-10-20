@@ -21,6 +21,7 @@
 const sections = document.querySelectorAll('section');
 const navLi = document.querySelectorAll('.nav__list-item');
 
+
 window.addEventListener('scroll', ()=> {
   let current = '';
 
@@ -31,11 +32,7 @@ window.addEventListener('scroll', ()=> {
     {
       current = section.getAttribute('id');
     }
-
-
   })
-
-
 
   navLi.forEach( li => {
     li.classList.remove('nav__list-item--selected');
