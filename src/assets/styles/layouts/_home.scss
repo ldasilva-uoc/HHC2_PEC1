@@ -4,10 +4,10 @@
 }
 
 body {
-  font-family: $font-family-primary;
-  font-size: 16px;
   margin: 0;
   background-color: $color-secondary;
+  font-family: $font-family-primary;
+  font-size: 16px;
 }
 
 .section {
@@ -19,12 +19,12 @@ body {
 .section__container {
   width: 100%;
   height: 100%;
-}
 
-.section__title {
-  font-weight: bold;
-  margin-bottom: 10%;
-  font-size: 1.5rem;
+  .section__title {
+    font-weight: bold;
+    margin-bottom: 10%;
+    font-size: 1.5rem;
+  }
 }
 
 /*------------------------------------*\
@@ -37,42 +37,43 @@ body {
   position: fixed;
   width: 100%;
   z-index: 1;
+}
 
-  .nav {
-    width: 100%;
-    padding-top: 2rem;
-    padding-bottom: 1rem;
+.nav {
+  width: 100%;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+
+  .nav__list {
+    width: 90%;
+    padding: 0;
     display: flex;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
 
-    .nav__list {
-      width: 90%;
-      padding: 0;
-      display: flex;
-      flex-direction: row;
-      justify-content: space-evenly;
-    }
+  .nav__list-item {
+    display: inline-block;
+    text-align: center;
+  }
 
-    .nav__list-item {
-      display: inline-block;
-      text-align: center;
-    }
+  a {
+    text-decoration: none;
+    color: $color-secondary;
+  }
 
+  a:hover {
+    font-weight: bolder;
+  }
+
+  .nav__list-item--selected {
     a {
-      text-decoration: none;
-      color: $color-secondary;
+      text-decoration: underline;
     }
     a:hover {
-      font-weight: bolder;
-    }
-
-    .nav__list-item--selected {
-      a {
-        text-decoration: underline;
-      }
-      a:hover {
-        font-weight: normal;
-      }
+      font-weight: normal;
     }
   }
 }
@@ -231,7 +232,6 @@ body {
 .study__title {
   font-size: 0.9rem;
 }
-
 .study__year {
   color: $color-detail-secondary;
 }
@@ -344,6 +344,7 @@ body {
   /*------------------------------------*\
   #HEADER
   \*------------------------------------*/
+
   .nav {
     .nav__list {
       width: 80% !important;
@@ -363,10 +364,12 @@ body {
   /*------------------------------------*\
   #STUDY #WORK
   \*------------------------------------*/
+
   .list__inner {
     font-size: 1rem;
     height: 40rem !important;
   }
+
   /*------------------------------------*\
   #STUDY
   \*------------------------------------*/
@@ -413,8 +416,10 @@ body {
   /*------------------------------------*\
   #HEADER
   \*------------------------------------*/
+
   .nav {
     justify-content: end !important;
+    padding-top: 1rem;
 
     .nav__list {
       width: 40% !important;
@@ -438,6 +443,30 @@ body {
   .list__inner {
     font-size: 1rem;
     height: 25rem !important;
+  }
+
+  /*------------------------------------*\
+  #STUDY
+  \*------------------------------------*/
+
+  .section__study {
+    padding-top: 6rem;
+  }
+
+  /*------------------------------------*\
+  #WORK
+  \*------------------------------------*/
+
+  .section__work {
+    padding-top: 6rem;
+  }
+
+  /*------------------------------------*\
+  #ABILITY
+  \*------------------------------------*/
+
+  .section__ability {
+    padding-top: 6rem;
   }
 
   .ability__inner {
