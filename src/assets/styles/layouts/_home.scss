@@ -162,6 +162,7 @@ body {
 
 .list__container--left {
   align-items: flex-end;
+  text-align: right;
 }
 
 .list__dot {
@@ -230,7 +231,7 @@ body {
 }
 
 .study__title {
-  font-size: 0.9rem;
+  font-weight: bold;
 }
 .study__year {
   color: $color-detail-secondary;
@@ -247,13 +248,11 @@ body {
 }
 
 .work__title {
-  font-size: 0.9rem;
+  font-weight: bold;
 }
 
 .work__business {
-  font-weight: bold;
   color: $color-detail-secondary;
-  font-size: 0.8rem;
 }
 
 /*------------------------------------*\
@@ -315,6 +314,7 @@ body {
     flex-direction: column;
     width: 40%;
     margin: 0 auto;
+    border-radius: 50%;
   }
 }
 
